@@ -1,0 +1,22 @@
+# 秘密情報（トークン・Webhook URL）。見本は .env.example
+.env
+*.env
+!.env.example
+
+# 索引（notes/ と data/ から labnote reindex で作り直せる）
+labnote.db
+labnote.db-*
+*.db-wal
+*.db-shm
+
+# 実験のデータ（大きくなるので既定では Git に入れない。README の「Git で管理する」を参照）
+data/
+backup/
+
+# Python・uv
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+dist/

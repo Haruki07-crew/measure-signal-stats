@@ -1,0 +1,43 @@
+# /etc/systemd/system/labnote-bot.service（Raspberry Pi・Azure の VM 共通。docs/pi.md）
+[Unit]
+Description=labnote Discord bot (outbound only)
+After=network-online.target
+Wants=network-online.target
+# 5分の間に5回落ちたら、起動し直すのをあきらめる（トークンの誤りなどで無限に再起動しない）
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+# 専用のユーザー（ログインできない。docs/pi.md の手順2で作る）
+User=labnote
+Group=labnote
+# トークン・許可リスト（root:labnote、640）。Git に入れない
+EnvironmentFile=/etc/labnote/labnote.env
+Environment=LABNOTE_ENV_FILE=/nonexistent
+Environment=PYTHONUNBUFFERED=1
+WorkingDirectory=/var/lib/labnote
+# LABNOTE_HOME は env で必ずここに固定する（EnvironmentFile の値より強い）
+ExecStart=/usr/bin/env LABNOTE_HOME=/var/lib/labnote /opt/labnote/.venv/bin/labnote-bot
+Restart=on-failure
+RestartSec=10
+# 終了コード 2 は「設定の誤り」（トークンが見本のまま、許可リストが空）。再起動しても直らないので起動し直さない
+RestartPreventExitStatus=2
+# /var/lib/labnote を作り、labnote の持ち物にする（ProtectSystem=strict でもここだけ書ける）
+StateDirectory=labnote
+# 0750：labnote グループの人（docs/pi.md で管理者を入れる）だけが読める。バックアップの rsync 用
+StateDirectoryMode=0750
+# ---- 保護機能（II-1 の labstatus.service と同じ考え方。最小権限） ----
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+LockPersonality=yes
+
+[Install]
+WantedBy=multi-user.target

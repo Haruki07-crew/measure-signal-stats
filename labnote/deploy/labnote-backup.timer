@@ -1,0 +1,10 @@
+# /etc/systemd/system/labnote-backup.timer（任意。毎日 04:30 に labnote-backup.service を動かす）
+[Unit]
+Description=Daily labnote backup
+
+[Timer]
+OnCalendar=*-*-* 04:30:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,16 @@
+# /etc/systemd/system/labnote-backup.service（任意。labnote-backup.timer から毎日1回）
+[Unit]
+Description=labnote backup (SQLite snapshot + notes + data)
+
+[Service]
+Type=oneshot
+User=labnote
+Group=labnote
+Environment=LABNOTE_ENV_FILE=/nonexistent
+# LABNOTE_HOME は env で必ずここに固定する（EnvironmentFile の値より強い）
+ExecStart=/usr/bin/env LABNOTE_HOME=/var/lib/labnote /opt/labnote/.venv/bin/labnote backup /var/lib/labnote/backup/latest
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+ReadWritePaths=/var/lib/labnote
