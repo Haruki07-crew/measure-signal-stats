@@ -429,6 +429,7 @@ svg .ttl{font-size:15px;font-weight:700}
 <tr><td>（第4章までに買い足す）</td><td>P チャネル MOSFET（ロジックレベル）MTB060P06I3（CYStech、秋月 116095）×2</td><td>1式</td><td>第4章の Q1（1個は予備）。手持ちの IRFU9024N の代わり（理由は第4章）</td></tr>
 </tbody>
 </table>
+<p class="small">この表の「手持ち」「買い足す」は<b>著者の環境</b>を基準にしています。自分の手持ちは<a href="#appB-2">付録B-2 の購入リスト</a>で、持っている物にチェックを入れて確かめてください。</p>
 <p class="small">買い足す4品を秋月電子でまとめて買うときの目安は、電池ボックス ¥170、ヒューズ 1本 ¥50 ×3、ホルダー ¥80、MOSFET 1個 ¥50 ×2 で約 ¥500、非常停止ボタンも買うなら ¥940 を足して約 ¥1,440（どれも2026年11月の目安。値段・在庫・送料は公式サイトで要確認）。同じ規格の品なら、ほかの店のものでもかまいません。</p>
 
 <h3 id="ch0-3">0-3. 原理</h3>
@@ -44945,7 +44946,7 @@ Best regards,
 <h3 id="appB-1">B-1. この付録のねらいと使い方</h3>
 <p>全章（入門1〜4、第0〜8章、第II〜IV部、最終演習、付録A）の「必要な部品」の表を1つにまとめ、手持ちの物と買い足す物、最初に使う章、値段の目安を一覧にした付録です。章の途中で初めて出てくる部品（第3章の 1MΩ など）に、その章に着いてから気づくことがないように、<b>始める前にこの付録で手持ちを確かめ、買い足す物をまとめて注文する</b>ために使います。</p>
 <ul>
-<li><b>B-2</b> は買い足す物（必須）だけの短い表です。まずここを見ます。</li>
+<li><b>B-2</b> は<b>購入リスト</b>です。持っている物にチェックを入れると「持っている物」に移り、残りが買う物になります。まずここを使います。</li>
 <li><b>B-3</b> は全部の部品・道具・ソフトの表です。「最初に使う章」は、ホーム画面の「おすすめの読む順番」（入門1 → 第0章前半 → 入門2〜4 → 第1〜8章 → …）で最初に出てくる章です。</li>
 <li><b>B-4</b> は抵抗・コンデンサ・ダイオードなどの小物を、値ごとに数をまとめた表です。</li>
 <li><b>B-5</b> は、<a href="#routes">読む道筋と所要時間</a>の道筋ごとに、何を買い足せばよいかと合計の目安です。</li>
@@ -44953,21 +44954,84 @@ Best regards,
 </ul>
 <p class="small">値段は、本文の各章の表に書いてある物だけを載せました（2026年11月の目安）。値段・在庫・送料は店と時期で変わるので、<b>公式サイト・店で要確認（執筆時点の目安）</b>です。同じ規格の品なら、例に挙げた店のもの以外でもかまいません（ただし B-8 の「変えてはいけない規格」は守る）。各章の表と食い違って見える所があれば、<b>その章の表を正とします</b>。</p>
 
-<h3 id="appB-2">B-2. 買い足す物（必須）</h3>
-<p>手持ちの機材（全章共通の約束の前提）に無く、電子回路の章を進めると必要になる物は、次の4品（と、手持ちのボタンが a接点のときの非常停止ボタン）だけです（3品は入門2 から、MOSFET は第4章から使います。入門2・第4章を通らない道筋では要らない物があるので、道筋ごとの買い物は B-5 で確かめてください）。秋月電子でまとめて買うと、約 ¥500（非常停止ボタンも買うなら約 ¥1,440）です（<a href="#ch0-2">第0章の部品表</a>と同じ）。</p>
-<table>
-<thead><tr><th>記号</th><th>品名（型番）</th><th>数</th><th>最初に使う章</th><th>値段の目安</th><th>注</th></tr></thead>
-<tbody>
-<tr><td>BT</td><td>単4×4本用電池ボックス（フタ・スイッチ・リード線付き。例：COMF SBH-441AS、秋月 100735）</td><td>1</td><td><a href="#intro2">入門2</a></td><td>¥170</td><td><b>必須</b>。手持ちの単4ニッケル水素×4 を入れる。単3用ボックスに単4を入れない。単3×3 は電圧が足りないので使わない（入門2-3-6）</td></tr>
-<tr><td>FU1</td><td>ガラス管ヒューズ 2A・250V、6.35×31.8mm、<b>タイムラグ形でないもの</b>（例：大東通信機 MF61NR、秋月 107136）</td><td>3（1本＋予備2本）</td><td><a href="#intro2">入門2</a></td><td>1本 ¥50（3本 ¥150）</td><td><b>必須</b>。電池の＋の直後（ボックスから5cm以内）に入れる</td></tr>
-<tr><td>FH1</td><td>中継用（ケーブル取付）ヒューズホルダー、30mm 管用（例：マル信無線電機 MF-520、秋月 109629）</td><td>1</td><td><a href="#intro2">入門2</a></td><td>¥80</td><td><b>必須</b>。定格 125VAC 3A（資料で<b class="chk-a">必ず確認</b>）</td></tr>
-<tr><td>Q1</td><td>P チャネル MOSFET（ロジックレベル）MTB060P06I3（CYStech、TO-251、秋月 116095）</td><td>2（1個は予備）</td><td><a href="#ch4">第4章</a></td><td>1個 ¥50（2個 ¥100）</td><td><b>第4章までに必須</b>。手持ちの IRFU9024N の代わり（理由は 4-3-2）</td></tr>
-<tr><td>SW1</td><td>非常停止用押しボタンスイッチ、<b>b接点（1b）</b>、押すとロックし回して戻す形（例：ECE ECS-22RE1R1Q-010Q、秋月 131314）</td><td>1</td><td><a href="#intro4">入門4</a></td><td>¥940</td><td>手持ちの「丸型・1接点・赤」が<b>a接点だったときだけ</b>買い足す（入門4 の手順2 でテスタで確かめる）。取付穴 Ø22mm なので、取り付ける箱か板も用意する</td></tr>
-</tbody>
-</table>
-<p class="small">FU1・FH1・BT は入門2 で電源リードに組み込み、そのあと入門4・第4章・第5章で使い続けます。入門2 を始める前に届くように注文してください。MTB060P06I3 と非常停止ボタンも同じ店で一緒に頼むと、送料が1回で済みます。</p>
+<h3 id="appB-2">B-2. 購入リスト（持っている物にチェック）</h3>
+<p>全章で使う部品・道具 55 品の一覧です（ソフトとアカウントは B-3 の (5)）。<b>すでに持っている物にチェックを入れる</b>と、下の「持っている物」に移ります。「買う物」に残った物が、注文する物です。チェックはこのブラウザの中だけに保存され、どこにも送られません（別のブラウザやスマホとは共有されません）。</p>
+<ul>
+<li><b>必要</b>（37 品）：その章を進めるのに要る物です。全部の章をしない人は、<a href="#routes">読む道筋</a>に合わせて「最初に使う章」「使う章」を見て、通らない章の物は買わなくてかまいません（道筋ごとの目安は B-5）。</li>
+<li><b>家にある物</b>：台所・文房具など。無ければ買うか借ります。<b>任意</b>：無くても章の主要な部分ができる物です。</li>
+<li>型番は例です。同じ規格の品なら、ほかの店の物でもかまいません。ただし <b>ヒューズ（2A・タイムラグ形でない）、非常停止ボタン（b接点）、単4×4本用の電池ボックス、第4章の MOSFET（ロジックレベルの P チャネル）</b>は規格を変えないでください（B-8）。</li>
+</ul>
+<p class="small">この教科書の本文の「手持ち」「買い足す」は、<b>著者の環境</b>（MacBook Air、Pico 2 WH ×2、Raspberry Pi 5、部品セットなど）を基準にした言い方です。読者は、この購入リストで自分の手持ちを確かめてください。値段は2026年11月の目安で、店と時期で変わります（公式サイト・店で要確認）。電池ボックス・ヒューズ・ホルダーは入門2 から使うので、入門2 を始める前に届くように注文します。</p>
+<div id="buylist">
+<div class="bl-bar"><span class="bl-count">買う物 —</span><label><input type="checkbox" class="bl-show-opt" checked> 任意の物も表示</label><label><input type="checkbox" class="bl-show-home" checked> 家にある物も表示</label><button type="button" class="bl-copy">買う物をコピー</button><button type="button" class="bl-reset">チェックを全部外す</button></div>
+<h4>買う物（まだ持っていない物）</h4>
+<p class="bl-empty bl-want-empty" hidden>買う物はありません。</p>
+<ul class="bl-list bl-want">
+<li class="bl-item" data-key="b00" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">MacBook Air（Apple シリコン、16GB）</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>PC・マイコン・計測器</span><span>数：1</span><span>最初に使う章：<a href="#intro1">入門1</a></span></div><div class="bl-uses">使う章：全部の章</div><div class="bl-note">内蔵マイクは実質1チャネル（第5章・第7章・第IV部・最終演習K）</div></li>
+<li class="bl-item" data-key="b01" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">Raspberry Pi Pico 2 WH（Pico A＝MicroPython、Pico B＝C SDK）</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>PC・マイコン・計測器</span><span>数：2</span><span>最初に使う章：<a href="#intro1">入門1</a>（A）、<a href="#ch0">第0章</a>前半（B）</span></div><div class="bl-uses">使う章：入門1・3・4、第0〜6章、II-4（A と B）、II-5、最終演習Y（A）</div><div class="bl-note">マスキングテープで A・B の印をつける</div></li>
+<li class="bl-item" data-key="b02" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">USB ケーブル（C to Micro-B、<b>データ通信対応</b>）</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>PC・マイコン・計測器</span><span>数：1</span><span>最初に使う章：<a href="#intro1">入門1</a></span></div><div class="bl-uses">使う章：Pico を使う全部の章</div><div class="bl-note">充電専用のケーブルでは書き込めない。2台の Pico を同時に USB につなぐ手順はないので、1本を挿し替えて使う。第3章 B（約2日）と最終演習Y（7日以上）の記録の間はこの1本を Pico A が使うので、その間に Pico B の章を進めたいときだけ2本目を買い足す（任意）</div></li>
+<li class="bl-item" data-key="b03" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">デジタルマルチメータ DE-200A</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>PC・マイコン・計測器</span><span>数：1</span><span>最初に使う章：<a href="#intro1">入門1</a></span></div><div class="bl-uses">使う章：入門1〜4、第0〜6章、II-5</div><div class="bl-note">電流レンジの有無は取扱説明書で要確認</div></li>
+<li class="bl-item" data-key="b04" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">Raspberry Pi 5（4GB）＋公式ケース</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>PC・マイコン・計測器</span><span>数：1</span><span>最初に使う章：<a href="#ch0-5-second">第0章後半</a>（II-1 の手順2〜6 のあと）</span></div><div class="bl-uses">使う章：第0章後半、第3章 B、II-1〜II-5、入門4・第4章（ロジアナ用、任意）、最終演習Y</div><div class="bl-note">OS は Lite 版（II-1）</div></li>
+<li class="bl-item" data-key="b05" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">Raspberry Pi 5 用の電源 5V/5A（公式27W 電源相当）</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>PC・マイコン・計測器</span><span>数：1</span><span>最初に使う章：<a href="#ch0-5-second">第0章後半</a></span></div><div class="bl-uses">使う章：Pi を使う全部の章</div><div class="bl-note">Pi を使わない道筋なら不要</div></li>
+<li class="bl-item" data-key="b06" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">microSD カード（32GB 以上を推奨）</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>PC・マイコン・計測器</span><span>数：1（2枚目は任意）</span><span>最初に使う章：<a href="#p2c1">II-1</a>（手順2〜6 で Lite 版を書き込む）</span></div><div class="bl-uses">使う章：第0章後半、II-1〜II-5、最終演習Y（記録）</div><div class="bl-note">2枚目があると第0章の環境を残したまま試せる（II-1）。II-3 は空きが数GB 以上</div></li>
+<li class="bl-item" data-key="b07" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">SD カードリーダー（Mac につなぐ）</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>PC・マイコン・計測器</span><span>数：1</span><span>最初に使う章：<a href="#p2c1">II-1</a></span></div><div class="bl-uses">使う章：II-1（OS の書き込み）</div><div class="bl-note">microSD が直接挿せない形なら、SD 変換アダプタに入れて挿す</div></li>
+<li class="bl-item" data-key="b08" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">USB ロジックアナライザ（24MHz・8ch、sigrok の fx2lafw 対応、入力5Vまで）</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>PC・マイコン・計測器</span><span>数：1</span><span>最初に使う章：<a href="#ch0-5-second">第0章後半</a></span></div><div class="bl-uses">使う章：第0章後半、II-5（必須）、入門1・入門4 D・第4章（任意）</div><div class="bl-note">Pi では sigrok-cli、波形の表示は Mac の PulseView（無料）</div></li>
+<li class="bl-item" data-key="b09" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">Wi-Fi 中継機 TP-Link RE600X、自宅のルーター</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>PC・マイコン・計測器</span><span>数：—</span><span>最初に使う章：<a href="#ch0">第0章</a>後半</span></div><div class="bl-uses">使う章：第0章後半、II-1〜II-5</div><div class="bl-note">LAN ケーブルは任意（II-1。有線のほうが安定）</div></li>
+<li class="bl-item" data-key="b10" data-cat="opt"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">（任意）USB 充電器（5V、USB-C 出力）</span></label><div class="bl-meta"><span class="bl-tag bl-opt">任意</span><span>PC・マイコン・計測器</span><span>数：1</span><span>最初に使う章：<a href="#intro1">入門1</a></span></div><div class="bl-uses">使う章：入門1</div><div class="bl-note">Mac なしで main.py を動かす確認用</div></li>
+<li class="bl-item" data-key="b11" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">はんだこて HAKKO FX600-02、こて台、クリーナー、断熱作業マット</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>はんだ付けの道具と電源まわり</span><span>数：1式</span><span>最初に使う章：<a href="#intro2">入門2</a></span></div><div class="bl-uses">使う章：入門2</div><div class="bl-note">換気する。こて先の形と温度範囲は取扱説明書で要確認</div></li>
+<li class="bl-item" data-key="b12" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">鉛入りはんだ φ0.8mm（ヤニ入り）、はんだ吸取線</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>はんだ付けの道具と電源まわり</span><span>数：適量</span><span>最初に使う章：<a href="#intro2">入門2</a></span></div><div class="bl-uses">使う章：入門2</div><div class="bl-note">作業後に手を洗う。作業中は飲食しない</div></li>
+<li class="bl-item" data-key="b13" data-cat="opt"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">ニッパ、ワイヤーストリッパ（AWG22 が切れるもの）、ピンセット</span></label><div class="bl-meta"><span class="bl-tag bl-opt">任意</span><span>はんだ付けの道具と電源まわり</span><span>数：各1</span><span>最初に使う章：<a href="#intro2">入門2</a></span><span class="bl-price">本文に記載なし</span></div><div class="bl-uses">使う章：入門2、第8章・最終演習（ピンセット）</div><div class="bl-note">ストリッパが無ければニッパで慎重にむく</div></li>
+<li class="bl-item" data-key="b14" data-cat="opt"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">保護めがね（ふつうの眼鏡でも可）</span></label><div class="bl-meta"><span class="bl-tag bl-opt">任意</span><span>はんだ付けの道具と電源まわり</span><span>数：1</span><span>最初に使う章：<a href="#intro2">入門2</a></span></div><div class="bl-uses">使う章：入門2</div><div class="bl-note">リード線の切れ端・はんだの飛び散りから目を守る</div></li>
+<li class="bl-item" data-key="b15" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">ビニールテープ／熱収縮チューブ</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>はんだ付けの道具と電源まわり</span><span>数：適量</span><span>最初に使う章：<a href="#intro2">入門2</a></span></div><div class="bl-uses">使う章：入門2</div><div class="bl-note">熱収縮チューブがあるほうが確実</div></li>
+<li class="bl-item" data-key="b16" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">ピンヘッダ</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>はんだ付けの道具と電源まわり</span><span>数：適量</span><span>最初に使う章：<a href="#intro2">入門2</a></span></div><div class="bl-uses">使う章：入門2</div><div class="bl-note">モジュール用と練習用リード20本分</div></li>
+<li class="bl-item" data-key="b17" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">電線 UL1007 AWG22（6色×各2m）</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>はんだ付けの道具と電源まわり</span><span>数：約3m</span><span>最初に使う章：<a href="#intro2">入門2</a></span></div><div class="bl-uses">使う章：入門2、第4章</div><div class="bl-note">電源リード（赤・黒）と練習用リード</div></li>
+<li class="bl-item" data-key="b18" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">XT30 コネクタ（オス・メス）J1</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>はんだ付けの道具と電源まわり</span><span>数：1組</span><span>最初に使う章：<a href="#intro2">入門2</a></span></div><div class="bl-uses">使う章：入門2・4、第4・5章</div><div class="bl-note">電源リードのコネクタ</div></li>
+<li class="bl-item" data-key="b19" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">組端子台 4P TB1</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>はんだ付けの道具と電源まわり</span><span>数：1（手持ち2）</span><span>最初に使う章：<a href="#intro2">入門2</a></span></div><div class="bl-uses">使う章：入門2・4、第4・5章</div><div class="bl-note">電源の入口 P1〜P4</div></li>
+<li class="bl-item" data-key="b20" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">ポリスイッチ LVR200S F1</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>はんだ付けの道具と電源まわり</span><span>数：1</span><span>最初に使う章：<a href="#intro2">入門2</a></span></div><div class="bl-uses">使う章：入門2・4、第4・5章</div><div class="bl-note">遅い。短絡は FU1 が受け持つ</div></li>
+<li class="bl-item" data-key="b21" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">ガラス管ヒューズ 2A MF61NR（FU1）＋ホルダー MF-520（FH1）</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>はんだ付けの道具と電源まわり</span><span>数：3＋1</span><span>最初に使う章：<a href="#intro2">入門2</a></span><span class="bl-price">¥150＋¥80</span></div><div class="bl-uses">使う章：入門2・4、第4・5章</div><div class="bl-note">B-2。第4章・第5章（N20 1個）の間だけは、同じ大きさの 1A（例：MF61NR 250V 1A、秋月 107135、1本 ¥30 程度。執筆時点の目安・要確認）に替えてもよい（任意。4-2・4-3-10）。入門4 のサーボに戻るときは 2A に戻す</div></li>
+<li class="bl-item" data-key="b22" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">単4×4本用電池ボックス SBH-441AS（BT）</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>はんだ付けの道具と電源まわり</span><span>数：1</span><span>最初に使う章：<a href="#intro2">入門2</a></span><span class="bl-price">¥170</span></div><div class="bl-uses">使う章：入門2・4、第4・5章</div><div class="bl-note">B-2</div></li>
+<li class="bl-item" data-key="b23" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">単4ニッケル水素電池</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>はんだ付けの道具と電源まわり</span><span>数：4（手持ち12）</span><span>最初に使う章：<a href="#intro2">入門2</a></span></div><div class="bl-uses">使う章：入門2・4、第4・5章</div><div class="bl-note">公称4.8V、満充電直後 約5.6V。充電したものを使う</div></li>
+<li class="bl-item" data-key="b24" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">ニッケル水素電池の専用充電器</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>はんだ付けの道具と電源まわり</span><span>数：1</span><span>最初に使う章：<a href="#intro2">入門2</a></span></div><div class="bl-uses">使う章：入門4、第4・5章（充電した電池を使う）</div><div class="bl-note">充電は充電器の説明書に従う（<a href="#intro2-nimh">入門2-3-6</a>）。マイコンの回路で自作の充電をしない（全章共通の約束）</div></li>
+<li class="bl-item" data-key="b25" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">非常停止ボタン b接点（SW1）＋取り付ける箱か板</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>はんだ付けの道具と電源まわり</span><span>数：1</span><span>最初に使う章：<a href="#intro4">入門4</a></span><span class="bl-price">¥940（買うとき）</span></div><div class="bl-uses">使う章：入門4、第4・5章</div><div class="bl-note">B-2。Ø22mm の穴をあける（入門4-3-3）</div></li>
+<li class="bl-item" data-key="b26" data-cat="home"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">マスキングテープ、油性ペン、精密ドライバー</span></label><div class="bl-meta"><span class="bl-tag bl-home">家にある物</span><span>はんだ付けの道具と電源まわり</span><span>数：各1</span><span>最初に使う章：<a href="#intro1">入門1</a></span></div><div class="bl-uses">使う章：ほぼ全部の実験の章</div><div class="bl-note">印付け、端子台のねじ（ねじの大きさは手持ちで要確認）</div></li>
+<li class="bl-item" data-key="b27" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">ブレッドボード EIC-801</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>ブレッドボード・センサ・アクチュエータ・半導体</span><span>数：最大2（手持ち4）</span><span>最初に使う章：<a href="#intro1">入門1</a></span></div><div class="bl-uses">使う章：電子回路の全部の章（2枚使うのは第4・5章・II-4）</div><div class="bl-note">第1章と第4章の回路を残しておくなら3〜4枚</div></li>
+<li class="bl-item" data-key="b28" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">ジャンパワイヤ（オス–オス。II-5 ではオス–メスも）</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>ブレッドボード・センサ・アクチュエータ・半導体</span><span>数：適量（手持ち240本）</span><span>最初に使う章：<a href="#intro1">入門1</a></span></div><div class="bl-uses">使う章：電子回路の全部の章</div><div class="bl-note">II-5 で Pi の GPIO ヘッダにつなぐのにオス–メスを使う</div></li>
+<li class="bl-item" data-key="b29" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">タクトスイッチ</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>ブレッドボード・センサ・アクチュエータ・半導体</span><span>数：1〜5（手持ち5）</span><span>最初に使う章：<a href="#intro1">入門1</a></span></div><div class="bl-uses">使う章：入門1</div><div class="bl-note">統計の段階で5個（S1〜S5 の印）</div></li>
+<li class="bl-item" data-key="b30" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">LED 赤625nm・緑525nm・赤外940nm</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>ブレッドボード・センサ・アクチュエータ・半導体</span><span>数：各1（手持ち各5）</span><span>最初に使う章：<a href="#intro1">入門1</a></span></div><div class="bl-uses">使う章：入門1（赤・緑）、入門3（赤）、第1章（3色）</div><div class="bl-note">赤外は目に見えない（入門1 では使わない）</div></li>
+<li class="bl-item" data-key="b31" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">INA219 電流センサモジュール（シャント 0.1Ω）M1</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>ブレッドボード・センサ・アクチュエータ・半導体</span><span>数：1</span><span>最初に使う章：<a href="#intro2">入門2</a>（ピンヘッダ）</span></div><div class="bl-uses">使う章：入門3・4、第4・5章、II-4、II-5</div><div class="bl-note">2枚目は入門2 の発展課題（4端子法）で任意</div></li>
+<li class="bl-item" data-key="b32" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">BME280 温湿度気圧センサモジュール M2</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>ブレッドボード・センサ・アクチュエータ・半導体</span><span>数：1</span><span>最初に使う章：<a href="#intro2">入門2</a>（ピンヘッダ）</span></div><div class="bl-uses">使う章：入門3、第3章 B、II-4、II-5、最終演習Y（任意：第2章・第8章・IV-3）</div><div class="bl-note">実物が BMP280 だと湿度が出ない（入門3-7）。湿度が必要なら確認できるモジュールを任意で追加</div></li>
+<li class="bl-item" data-key="b33" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">FXMA2102 I2C レベル変換モジュール M3</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>ブレッドボード・センサ・アクチュエータ・半導体</span><span>数：1</span><span>最初に使う章：<a href="#intro2">入門2</a></span></div><div class="bl-uses">使う章：入門2（はんだの練習だけ）</div><div class="bl-note">3.3V だけで使うので、ほかの章では使わない</div></li>
+<li class="bl-item" data-key="b34" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">マイクロサーボ MG90D SV1・SV2</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>ブレッドボード・センサ・アクチュエータ・半導体</span><span>数：2</span><span>最初に使う章：<a href="#intro4">入門4</a></span></div><div class="bl-uses">使う章：入門4</div><div class="bl-note">別電源（BT）から給電、GND だけ共通</div></li>
+<li class="bl-item" data-key="b35" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">エンコーダ付き N20 ギアモータ（6V・300RPM、uxcell）M</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>ブレッドボード・センサ・アクチュエータ・半導体</span><span>数：1（手持ち2）</span><span>最初に使う章：<a href="#ch4">第4章</a></span></div><div class="bl-uses">使う章：第4章、第5章、II-5（手で回すだけ）</div><div class="bl-note">パルス数・減速比は実測で決める</div></li>
+<li class="bl-item" data-key="b36" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">2N7000（小信号 Nch MOSFET）</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>ブレッドボード・センサ・アクチュエータ・半導体</span><span>数：3</span><span>最初に使う章：<a href="#ch1">第1章</a></span></div><div class="bl-uses">使う章：第1章（1）、第2章（3。1個はレンジ切替と兼用）、第4章（1）</div><div class="bl-note">第2章で Q_A・Q_B・Q_C の印をつける</div></li>
+<li class="bl-item" data-key="b37" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">MTB060P06I3（Q1）</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>ブレッドボード・センサ・アクチュエータ・半導体</span><span>数：2</span><span>最初に使う章：<a href="#ch4">第4章</a></span><span class="bl-price">¥100（2個）</span></div><div class="bl-uses">使う章：第4章、第5章</div><div class="bl-note">B-2</div></li>
+<li class="bl-item" data-key="b38" data-cat="opt"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">（任意）圧電素子</span></label><div class="bl-meta"><span class="bl-tag bl-opt">任意</span><span>ブレッドボード・センサ・アクチュエータ・半導体</span><span>数：1〜2</span><span>最初に使う章：<a href="#p4c9">IV-9</a></span><span class="bl-price">本文に記載なし</span></div><div class="bl-uses">使う章：IV-9 のテーマ候補②の計画の中だけ</div><div class="bl-note">保護回路の値はデータシートで<b class="chk-a">必ず確認</b>（IV-9）</div></li>
+<li class="bl-item" data-key="b39" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">スマートフォン（カメラ・録音アプリ・分度器アプリ）</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>家にある物・消耗品（撮影・試料・音）</span><span>数：1</span><span>最初に使う章：<a href="#intro4">入門4</a>（分度器アプリ。紙の分度器でもよい）</span></div><div class="bl-uses">使う章：第8章・最終演習Y・Y-MI（撮影）、IV-3・IV-5・最終演習K（録音）</div><div class="bl-note">Raspberry Pi 用カメラは持っていない前提</div></li>
+<li class="bl-item" data-key="b40" data-cat="home"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">分度器、つまようじかストロー（指針）、両面テープ</span></label><div class="bl-meta"><span class="bl-tag bl-home">家にある物</span><span>家にある物・消耗品（撮影・試料・音）</span><span>数：各1</span><span>最初に使う章：<a href="#intro4">入門4</a></span></div><div class="bl-uses">使う章：入門4、第8章（つまようじ・両面テープ）</div><div class="bl-note">サーボの角度を読む</div></li>
+<li class="bl-item" data-key="b41" data-cat="home"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">たこ糸（木綿の糸）約40cm、クリップ・小さなおもり、練り消し、台所用スポンジ、巻尺</span></label><div class="bl-meta"><span class="bl-tag bl-home">家にある物</span><span>家にある物・消耗品（撮影・試料・音）</span><span>数：少し</span><span>最初に使う章：<a href="#ch4">第4章</a></span></div><div class="bl-uses">使う章：第4章（糸ブレーキ）、第5章（異常 U・F、振動の台）、IV-3・最終演習K（巻尺、任意）</div></li>
+<li class="bl-item" data-key="b42" data-cat="home"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">撮影台一式（スマホスタンドか本と輪ゴム、本・箱、名刺・コピー用紙、トレー、ティッシュ、1円玉、定規）</span></label><div class="bl-meta"><span class="bl-tag bl-home">家にある物</span><span>家にある物・消耗品（撮影・試料・音）</span><span>数：1式</span><span>最初に使う章：<a href="#ch8">第8章</a></span></div><div class="bl-uses">使う章：第8章、最終演習Y、最終演習Y-MI</div><div class="bl-note">1円玉（直径20.0mm）をスケールにする</div></li>
+<li class="bl-item" data-key="b43" data-cat="opt"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">（任意）クリップ式マクロレンズ（スマホ用）</span></label><div class="bl-meta"><span class="bl-tag bl-opt">任意</span><span>家にある物・消耗品（撮影・試料・音）</span><span>数：1</span><span>最初に使う章：<a href="#ch8">第8章</a></span><span class="bl-price">本文に記載なし</span></div><div class="bl-uses">使う章：第8章、最終演習Y・Y-MI</div><div class="bl-note">最短距離で写る横幅が 40mm を超える機種だけ</div></li>
+<li class="bl-item" data-key="b44" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">精製水（薬局）</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>家にある物・消耗品（撮影・試料・音）</span><span>数：第8章 1本、最終演習Y 500mL×2</span><span>最初に使う章：<a href="#ch8">第8章</a></span><span class="bl-price">約200〜400円</span></div><div class="bl-uses">使う章：第8章、最終演習Y、Y-MI</div><div class="bl-note">同じ製品・同じロットを最後まで使う（最終演習Y）</div></li>
+<li class="bl-item" data-key="b45" data-cat="opt"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">耐水ペーパー #400（ベイズ最適化では #120〜#2000 の数種類）</span></label><div class="bl-meta"><span class="bl-tag bl-opt">任意</span><span>家にある物・消耗品（撮影・試料・音）</span><span>数：数枚</span><span>最初に使う章：<a href="#ch8">第8章</a></span><span class="bl-price">約100〜300円（#400 を2枚）</span></div><div class="bl-uses">使う章：第8章、最終演習Y</div><div class="bl-note">ホームセンター・100円ショップ</div></li>
+<li class="bl-item" data-key="b46" data-cat="home"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">消毒用エタノールまたは IPA、台所用の<b>中性</b>洗剤</span></label><div class="bl-meta"><span class="bl-tag bl-home">家にある物</span><span>家にある物・消耗品（撮影・試料・音）</span><span>数：少量</span><span>最初に使う章：<a href="#ch8">第8章</a></span><span class="bl-price">本文に記載なし</span></div><div class="bl-uses">使う章：第8章（洗浄）、最終演習Y（中性洗剤の膜）</div><div class="bl-note">引火に注意。ほかの洗剤や漂白剤と混ぜない</div></li>
+<li class="bl-item" data-key="b47" data-cat="home"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">試料：PP のクリアファイル（マーク5）、PET の平らな容器、写真立てのガラス</span></label><div class="bl-meta"><span class="bl-tag bl-home">家にある物</span><span>家にある物・消耗品（撮影・試料・音）</span><span>数：各数枚</span><span>最初に使う章：<a href="#ch8">第8章</a></span></div><div class="bl-uses">使う章：第8章、最終演習Y（PP 2〜3枚。同じ製品）、Y-MI（PP・PET）</div><div class="bl-note">ガラスは切らない</div></li>
+<li class="bl-item" data-key="b48" data-cat="home"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">ピンセット、はさみ・カッター、使い捨て手袋（任意）</span></label><div class="bl-meta"><span class="bl-tag bl-home">家にある物</span><span>家にある物・消耗品（撮影・試料・音）</span><span>数：各1</span><span>最初に使う章：<a href="#ch8">第8章</a></span></div><div class="bl-uses">使う章：第8章、最終演習Y・Y-MI</div><div class="bl-note">試料を指でさわらない</div></li>
+<li class="bl-item" data-key="b49" data-cat="opt"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">（任意）先の細いスポイト・1mL シリンジ・マイクロピペット</span></label><div class="bl-meta"><span class="bl-tag bl-opt">任意</span><span>家にある物・消耗品（撮影・試料・音）</span><span>数：1</span><span>最初に使う章：<a href="#ch8">第8章</a></span><span class="bl-price">本文に記載なし</span></div><div class="bl-uses">使う章：第8章、最終演習Y（傾斜法の 20µL）</div><div class="bl-note">無ければつまようじ</div></li>
+<li class="bl-item" data-key="b50" data-cat="opt"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">ふたつきの保存容器（同じ製品を10個）</span></label><div class="bl-meta"><span class="bl-tag bl-opt">任意</span><span>家にある物・消耗品（撮影・試料・音）</span><span>数：10</span><span>最初に使う章：<a href="#finy">最終演習Y</a></span><span class="bl-price">約1,100円</span></div><div class="bl-uses">使う章：最終演習Y</div><div class="bl-note">無ければ本実験1 だけで研究を1周できる</div></li>
+<li class="bl-item" data-key="b51" data-cat="home"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">シリカゲル（<b>青い粒の混ざった物は使わない</b>）、食塩、紙コップ・小皿</span></label><div class="bl-meta"><span class="bl-tag bl-home">家にある物</span><span>家にある物・消耗品（撮影・試料・音）</span><span>数：適量</span><span>最初に使う章：<a href="#finy">最終演習Y</a></span><span class="bl-price">約100〜300円（シリカゲル）</span></div><div class="bl-uses">使う章：最終演習Y</div><div class="bl-note">乾燥の箱と飽和食塩水の高湿の箱</div></li>
+<li class="bl-item" data-key="b52" data-cat="need"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">アクリル板（PMMA）、PS の容器（発泡スチロールは使わない）</span></label><div class="bl-meta"><span class="bl-tag bl-need">必要</span><span>家にある物・消耗品（撮影・試料・音）</span><span>数：各1</span><span>最初に使う章：<a href="#finymi">最終演習Y-MI</a></span><span class="bl-price">アクリル板 約110〜300円</span></div><div class="bl-uses">使う章：最終演習Y-MI</div><div class="bl-note">プラスチックを燃やして見分けない</div></li>
+<li class="bl-item" data-key="b53" data-cat="opt"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">（任意）イヤホン・ヘッドホン</span></label><div class="bl-meta"><span class="bl-tag bl-opt">任意</span><span>家にある物・消耗品（撮影・試料・音）</span><span>数：1</span><span>最初に使う章：<a href="#ch7">第7章</a></span></div><div class="bl-uses">使う章：第7章、IV-1〜IV-9、最終演習K</div><div class="bl-note">いつも小さな音量から</div></li>
+<li class="bl-item" data-key="b54" data-cat="home"><label class="bl-row"><input type="checkbox" class="bl-chk" aria-label="持っている"><span class="bl-name">音を鳴らす機器（家族のスマホ・タブレット、Bluetooth スピーカーなど）</span></label><div class="bl-meta"><span class="bl-tag bl-home">家にある物</span><span>家にある物・消耗品（撮影・試料・音）</span><span>数：1（任意で2台目）</span><span>最初に使う章：<a href="#fink">最終演習K</a></span><span class="bl-price">0円</span></div><div class="bl-uses">使う章：最終演習K</div><div class="bl-note">無ければ Mac に合図だけ鳴らさせる方法がある（K-2）</div></li>
+</ul>
+<h4>持っている物</h4>
+<p class="bl-empty bl-have-empty">まだありません。持っている物にチェックを入れると、ここに移ります。</p>
+<ul class="bl-list bl-have">
+</ul>
+<noscript><p class="small">JavaScript が無効なので、チェックしても移動しません。一覧として使ってください。</p></noscript>
+</div>
 
 <h3 id="appB-3">B-3. 全部の部品・道具・ソフトの一覧</h3>
+<p class="small">この表の「手持ち／買い足し」の列は<b>著者の環境</b>での区分です。自分の手持ちは B-2 の購入リストで確かめてください。</p>
 <p>「手持ち」は全章共通の約束の前提の手持ちリストにある物、「要確認」はリストに無いが家にあるかもしれない物、「家にある物」は台所や文房具など、「任意」は無くても章の主要な部分ができる物です。章の名前を押すと、その章へ移ります。</p>
 
 <h4>(1) PC・マイコン・計測器</h4>
@@ -59987,6 +60051,89 @@ details.chapter[data-math="wait"][open] > :not(summary){visibility:hidden}
     fitWide(document);
     route();
     if (!isHome()) setTimeout(onScroll, 50);
+  });
+})();
+</script>
+<style>
+/* 付録B-2 の購入リスト（公開版だけ） */
+#buylist .bl-bar{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin:10px 0 6px}
+#buylist .bl-bar label{white-space:nowrap}
+#buylist .bl-count{font-weight:bold}
+#buylist h4{margin:16px 0 6px}
+#buylist ul.bl-list{list-style:none;padding:0;margin:0}
+#buylist .bl-item{border:1px solid var(--border);border-radius:10px;padding:8px 10px;margin:6px 0;background:var(--bg)}
+#buylist .bl-have .bl-item{opacity:.72}
+#buylist .bl-row{display:flex;gap:8px;align-items:flex-start;cursor:pointer}
+#buylist .bl-chk{width:18px;height:18px;margin-top:3px;flex:none}
+#buylist .bl-meta,#buylist .bl-uses,#buylist .bl-note{font-size:.86em;color:var(--muted);margin-left:26px}
+#buylist .bl-meta{display:flex;flex-wrap:wrap;gap:2px 12px;margin-top:2px}
+#buylist .bl-tag{font-weight:bold;padding:0 6px;border-radius:6px;border:1px solid var(--border)}
+#buylist .bl-need{color:var(--accent)}
+#buylist .bl-empty{color:var(--muted);font-size:.9em;margin:6px 0}
+#buylist.bl-hide-opt .bl-item[data-cat="opt"],#buylist.bl-hide-home .bl-item[data-cat="home"]{display:none}
+#buylist button{font:inherit;padding:3px 10px;border:1px solid var(--border);border-radius:8px;background:var(--code-bg);color:var(--fg);cursor:pointer}
+</style>
+<script>
+/* 付録B-2 の購入リスト（公開版だけ）：チェックした物を「持っている物」へ移す。チェックはこのブラウザだけに保存する */
+(function(){
+  var KEY = "mss-buylist-have-v1", OPT = "mss-buylist-view-v1";
+  function load(k, d){ try { var v = JSON.parse(localStorage.getItem(k) || "null"); return v == null ? d : v; } catch (e) { return d; } }
+  function save(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  document.addEventListener("DOMContentLoaded", function(){
+    var root = document.getElementById("buylist");
+    if (!root) return;
+    var want = root.querySelector(".bl-want"), have = root.querySelector(".bl-have");
+    var items = Array.prototype.slice.call(root.querySelectorAll(".bl-item"));
+    var order = {}; items.forEach(function(li, i){ order[li.dataset.key] = i; });
+    var owned = load(KEY, []); if (!Array.isArray(owned)) owned = [];
+    var view = load(OPT, {opt: true, home: true});
+    var cbOpt = root.querySelector(".bl-show-opt"), cbHome = root.querySelector(".bl-show-home");
+    function insertSorted(list, li){
+      var kids = list.children, k = order[li.dataset.key];
+      for (var i = 0; i < kids.length; i++) { if (order[kids[i].dataset.key] > k) { list.insertBefore(li, kids[i]); return; } }
+      list.appendChild(li);
+    }
+    function visible(li){ return !(li.dataset.cat === "opt" && !cbOpt.checked) && !(li.dataset.cat === "home" && !cbHome.checked); }
+    function refresh(){
+      root.classList.toggle("bl-hide-opt", !cbOpt.checked);
+      root.classList.toggle("bl-hide-home", !cbHome.checked);
+      var nw = 0, nh = 0, nneed = 0;
+      items.forEach(function(li){
+        if (!visible(li)) return;
+        if (li.parentNode === want) { nw++; if (li.dataset.cat === "need") nneed++; } else nh++;
+      });
+      root.querySelector(".bl-count").textContent = "買う物 " + nw + " 個（うち「必要」" + nneed + " 個）／持っている物 " + nh + " 個";
+      root.querySelector(".bl-want-empty").hidden = nw > 0;
+      root.querySelector(".bl-have-empty").hidden = nh > 0;
+    }
+    items.forEach(function(li){
+      var cb = li.querySelector(".bl-chk");
+      if (owned.indexOf(li.dataset.key) >= 0) { cb.checked = true; insertSorted(have, li); }
+      cb.addEventListener("change", function(){
+        insertSorted(cb.checked ? have : want, li);
+        owned = items.filter(function(x){ return x.parentNode === have; }).map(function(x){ return x.dataset.key; });
+        save(KEY, owned); refresh();
+      });
+    });
+    cbOpt.checked = view.opt !== false; cbHome.checked = view.home !== false;
+    [cbOpt, cbHome].forEach(function(c){ c.addEventListener("change", function(){ save(OPT, {opt: cbOpt.checked, home: cbHome.checked}); refresh(); }); });
+    root.querySelector(".bl-copy").addEventListener("click", function(){
+      var lines = items.filter(function(li){ return li.parentNode === want && visible(li); }).map(function(li){
+        var q = li.querySelector(".bl-meta span:nth-child(3)");
+        return "- [ ] " + li.querySelector(".bl-name").textContent.trim() + "（" + (q ? q.textContent : "") + "）";
+      });
+      var text = "購入リスト（measure-signal-stats 付録B-2）\n" + lines.join("\n");
+      var btn = this;
+      function done(ok){ btn.textContent = ok ? "コピーしました" : "コピーできませんでした"; setTimeout(function(){ btn.textContent = "買う物をコピー"; }, 2000); }
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ done(false); });
+      else done(false);
+    });
+    root.querySelector(".bl-reset").addEventListener("click", function(){
+      if (!confirm("チェックを全部外しますか？")) return;
+      items.forEach(function(li){ li.querySelector(".bl-chk").checked = false; insertSorted(want, li); });
+      owned = []; save(KEY, owned); refresh();
+    });
+    refresh();
   });
 })();
 </script>
