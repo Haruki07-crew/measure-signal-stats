@@ -20,3 +20,6 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 dist/
+
+# Docker 版の記録の置き場所（deploy/docker/compose.yaml）
+labnote-data/

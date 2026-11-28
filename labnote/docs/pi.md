@@ -2,6 +2,7 @@
 
 教科書の II-1 で用意した Pi（ホスト名 `labpi`、Raspberry Pi OS **Lite**、SSH は鍵だけ、ufw で受け口を閉じ、Tailscale で外から SSH）で、`labnote-bot` を systemd のサービスとして常に動かします。
 II-1 の `labstatus.service` と同じ考え方で、**専用のユーザー・root 所有のプログラム・最小権限**にします。
+Docker で動かしたいときは、この手順の代わりに [docker.md](docker.md) を使います（どちらか片方だけ）。
 
 | 置き場所 | 中身 | 持ち主 |
 |---|---|---|

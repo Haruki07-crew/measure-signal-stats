@@ -262,7 +262,7 @@ Pi 5 が必要になるのは、おもに次の所です。
 <a id="q15"></a>
 ## 15. labnote（実験ノートと Discord bot）は必須ですか
 
-必須ではありません。[`labnote/`](labnote/) は、教科書の実験の結果（測った値・図・考察）を Markdown と SQLite で残す CLI と、Discord から記録を送る・見る bot です。CLI は Python の標準ライブラリだけで動き、Mac で5分ほどで試せます。bot を Pi や Azure で常に動かす手順は `labnote/docs/` にあります。トークンは `.env` に書き、Git に入れません（`labnote/docs/security.md`）。
+必須ではありません。[`labnote/`](labnote/) は、教科書の実験の結果（測った値・図・考察）を Markdown と SQLite で残す CLI と、Discord から記録を送る・見る bot です。CLI は Python の標準ライブラリだけで動き、Mac で5分ほどで試せます。bot を Pi や Azure で常に動かす手順は `labnote/docs/` にあります（systemd で動かす `pi.md`・`azure.md` と、Docker で動かす `docker.md` のどちらか）。Docker で動くのは bot と CLI だけで、教科書の本文（Pico への書き込み・シリアル・マイク・Mac の GPU）は Docker の中では動かないので、本文は Mac で進めます。トークンは `.env` に書き、Git に入れません（`labnote/docs/security.md`）。
 
 詳しくは：[`labnote/README.md`](labnote/README.md)、表紙の「この教科書について」
 

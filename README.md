@@ -4,7 +4,7 @@
 
 - **教科書**：[`textbook.html`](textbook.html)（1ファイル。ブラウザで開くだけで読めます）。GitHub Pages で公開している場合は https://haruki07-crew.github.io/measure-signal-stats/ からも読めます。
 - **ノートブック**：[`notebooks/`](notebooks/)（34冊。Google Colab か Jupyter で、Pico やセンサがなくても動く部分を上から順に試せます）。
-- **実験ノートと Discord bot**：[`labnote/`](labnote/)（実験のメモと結果を Markdown＋SQLite で残す CLI と、Discord から記録を送る・見る bot。Raspberry Pi・Azure で動かす手順つき）。
+- **実験ノートと Discord bot**：[`labnote/`](labnote/)（実験のメモと結果を Markdown＋SQLite で残す CLI と、Discord から記録を送る・見る bot。Raspberry Pi・Azure で動かす手順つき。Docker でも動かせます）。
 
 ## 想定している読者と内容
 - 高専・大学の学生（Python が書ける、統計の基礎を学んだ）が、Raspberry Pi Pico 2 W・Raspberry Pi 5・Mac など手持ちの機材で、計測と解析を一通り体験する。

@@ -67,6 +67,8 @@ sudo ufw enable
 timedatectl                                     # System clock synchronized: yes
 ```
 
+Docker で動かすなら、ここから [docker.md](docker.md) の 1 に進みます（下の pi.md の手順は要りません）。
+
 あとは [pi.md](pi.md) の **1〜4・6** を、`labpi` を VM（`azureuser@<IP>`）に読み替えてそのまま行います。
 Ubuntu 24.04 の `/usr/bin/python3` は 3.12 系で、labnote（3.11 以上）が動きます（`python3 --version` で確かめる）。
 **同じトークンで Pi と Azure の両方の bot を同時に動かさないでください。** どちらか一方を止めます（`sudo systemctl disable --now labnote-bot`）。

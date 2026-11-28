@@ -1,0 +1,43 @@
+# labnote の Discord bot（Docker 版。docs/docker.md）
+# labnote/ のフォルダで：
+#   mkdir -p labnote-data && cp .env.example .env && chmod 600 .env   # .env にトークンと許可リストを書く
+#   docker compose -f deploy/docker/compose.yaml run --rm bot --check   # 設定だけ確かめる
+#   docker compose -f deploy/docker/compose.yaml up -d --build
+name: labnote
+services:
+  bot:
+    build:
+      context: ../..
+    image: labnote-bot:local
+    # トークン・許可リスト。.env は Git にもイメージにも入れない
+    env_file:
+      - path: ../../.env
+        required: true
+    environment:
+      LABNOTE_HOME: /data          # .env の LABNOTE_HOME より強い（コンテナの中の置き場所に固定）
+      LABNOTE_ENV_FILE: /nonexistent
+    # 手元のユーザーの UID・GID で動かす（labnote-data/ を手元のユーザーのまま読み書き・バックアップできる）。
+    # Raspberry Pi OS・Azure の Ubuntu の最初のユーザーは 1000 のことが多い。`id -u` `id -g` で要確認
+    user: "${LABNOTE_UID:-1000}:${LABNOTE_GID:-1000}"
+    volumes:
+      - type: bind
+        source: ../../labnote-data
+        target: /data
+        bind:
+          create_host_path: false  # 無いときに root の持ち物で勝手に作らない（先に mkdir する）
+    # 落ちたら起動し直す。Pi・VM を再起動したときも上がる（自分で down・stop したときは上がらない）。
+    # 設定の誤り（トークンが見本のまま、許可リストが空）でも起動し直し続けるので、先に run --rm bot --check で確かめる
+    restart: unless-stopped
+    # bot は外向きにつなぐだけ。ports は書かない（受け口を開けない）
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    logging:
+      driver: local
+      options:
+        max-size: "5m"
+        max-file: "3"

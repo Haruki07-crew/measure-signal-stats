@@ -1,0 +1,21 @@
+# イメージに入れない物（秘密・記録・作業用のファイル）
+.env
+*.env
+!.env.example
+labnote.db*
+*.db-wal
+*.db-shm
+data/
+backup/
+notes/
+labnote-data/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+dist/
+.git/
+tests/
+docs/
+deploy/

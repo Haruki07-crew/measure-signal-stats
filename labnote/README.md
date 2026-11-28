@@ -59,6 +59,10 @@ bot は外向きにつなぐだけなので、ufw の受け口は開けません
 
 小さな Linux の VM に、Pi と同じ手順で入れます。止め忘れの費用と、消し方も書いてあります。→ [docs/azure.md](docs/azure.md)
 
+### 5. Docker で動かす（任意）
+
+Pi・Azure の VM に Docker を入れて、`docker compose -f deploy/docker/compose.yaml up -d --build` の1行で bot を動かす方法です（3・4 の systemd の代わり。どちらか片方だけ）。root で動かさない・受け口を開けない・コンテナの中を書き換えない設定にしてあります。記録は `labnote-data/` に残ります。→ [docs/docker.md](docs/docker.md)
+
 安全のこと（トークンが漏れたとき、受け取るファイルの制限、送らないもの）は [docs/security.md](docs/security.md) にまとめました。
 
 ## 教科書の章とのつながり
@@ -109,14 +113,17 @@ labnote/
 ├── notes/
 │   ├── template.md         ノートのひな形
 │   └── examples/           書き方の例（第4章・入門1）
+├── Dockerfile              Docker 版のイメージ（.env は .dockerignore で入れない）
 ├── deploy/
 │   ├── labnote-bot.service     systemd のサービス（Pi・Azure の VM）
 │   ├── labnote-backup.service  毎日のバックアップ（任意）
-│   └── labnote-backup.timer
+│   ├── labnote-backup.timer
+│   └── docker/compose.yaml     Docker 版（任意。docs/docker.md）
 ├── docs/
 │   ├── discord_setup.md    bot の作り方・Intent・招待の URL・Mac で試す・Webhook
 │   ├── pi.md               Raspberry Pi（uv・systemd・更新・バックアップ・Tailscale）
 │   ├── azure.md            Azure（小さな VM。Container Instances は要点）
+│   ├── docker.md           Docker で動かす（Pi・Azure の VM 共通。任意）
 │   └── security.md         秘密情報・漏れたとき・受け取るファイルの制限・送らないもの
 └── tests/                  pytest（Discord につながずに、偽の interaction で試す）
 ```
